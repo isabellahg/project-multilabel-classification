@@ -1,0 +1,8 @@
+@misc{szymaski2017scikitbased,
+    title={A scikit-based Python environment for performing multi-label classification},
+    author={Piotr Szymański and Tomasz Kajdanowicz},
+    year={2017},
+    eprint={1702.01460},
+    archivePrefix={arXiv},
+    primaryClass={cs.LG}
+}
