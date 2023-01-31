@@ -10,3 +10,6 @@ ADAPTATION_APPROACHES = {BRkNNaClassifier,
                          MLkNN,
                          MLARAM,
                          MLTSVM}
+                         
+def get_description(function):
+    return function.__doc__.replace('\n', '').strip()

@@ -1,5 +1,6 @@
 from functools import reduce
 from skmultilearn.dataset import load_dataset
+from utils import get_description
 
 
 def instances(X):
@@ -61,10 +62,6 @@ YMETRICS = [labels,
             pdl,
             lcard,
             lden]
-
-
-def get_description(function):
-    return function.__doc__.replace('\n', '').strip()
 
 
 def metrics(datasetName):
