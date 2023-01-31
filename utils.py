@@ -1,3 +1,4 @@
+import pandas as pd
 from skmultilearn.problem_transform import BinaryRelevance, ClassifierChain, LabelPowerset
 from skmultilearn.adapt import BRkNNaClassifier, BRkNNbClassifier, MLkNN, MLARAM, MLTSVM
 
@@ -13,3 +14,14 @@ ADAPTATION_APPROACHES = {BRkNNaClassifier,
                          
 def get_description(function):
     return function.__doc__.replace('\n', '').strip()
+
+
+def display_results(result, classifiers):
+    for classifier in classifiers:
+        name = get_description(classifier)
+        score, report = result[name]
+        print("## Classifier: ", name)
+        print("### Cross validation training scores ")
+        print(pd.DataFrame(score).transpose())
+        print("### Classification report ")
+        print(report)

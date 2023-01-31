@@ -2,7 +2,7 @@ from sklearn.metrics import classification_report, hamming_loss, make_scorer
 from sklearn.model_selection import KFold, cross_val_predict, cross_validate
 from skmultilearn.dataset import load_dataset
 from utils import get_description
-N_SPLITS = 5
+N_SPLITS = 3
 
 
 def eval_report(classifierFactory, dataset_name):
